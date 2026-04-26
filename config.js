@@ -172,9 +172,9 @@ window.ARTIST_CONFIG = {
       discordWebhookUrl: "https://discord.com/api/webhooks/1497778992592326847/AL6q5g-wszX1rPpEAxV-rjktqQZ2hdb0mZ_x9d7pfNr1PGHUAgSLh5F7rj50QyIoqeqh",
       missingWebhookLabel: "Set Discord webhook in config",
       discordUrl: "https://discord.gg/example",
-      emailTo: "isaaccooper926@gmail.com",
+      emailTo: "kioumemaiko@gmail.com",
       emailSubject: "New Commission Request",
-      emailBodyIntro: "Hi, I would like to order a commission."
+      emailBodyIntro: "Hi Kioume (<@1265363366143201463>), I would like to order a commission."
     },
     cards: [
       {
