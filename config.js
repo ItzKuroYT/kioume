@@ -208,8 +208,8 @@ window.ARTIST_CONFIG = {
   contact: {
     heading: "Contact",
     phone: "No phone number set",
-    email: "No email set",
-    locationLabel: "Remote Worldwide",
+    email: "kioumemaiko@gmail.com",
+    locationLabel: "World Wide",
     discord: {
       label: "Discord",
       username: "whimsicalmutt_",
