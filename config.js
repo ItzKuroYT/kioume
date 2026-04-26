@@ -169,7 +169,7 @@ window.ARTIST_CONFIG = {
     orderAction: {
       type: "modal",
       label: "Order Now",
-      discordWebhookUrl: "https://discord.com/api/webhooks/1497778992592326847/AL6q5g-wszX1rPpEAxV-rjktqQZ2hdb0mZ_x9d7pfNr1PGHUAgSLh5F7rj50QyIoqeqh",
+      discordWebhookUrl: "DISCORD_WEBHOOK_URL",
       missingWebhookLabel: "Set Discord webhook in config",
       discordUrl: "https://discord.gg/example",
       emailTo: "kioumemaiko@gmail.com",
