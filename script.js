@@ -440,9 +440,9 @@
     const action = (cfg.pricing && cfg.pricing.orderAction) || {};
     const type = String(action.type || "modal").toLowerCase();
     const label = action.label || "Order Now";
-    const webhookUrl = getDiscordWebhookUrl();
+    const hasDispatch = hasDiscordDispatch();
 
-    if (!webhookUrl) {
+    if ((type === "modal" || type === "discord") && !hasDispatch) {
       const disabledButton = document.createElement("button");
       disabledButton.className = "btn btn-secondary order-now-btn is-disabled";
       disabledButton.type = "button";
@@ -1229,12 +1229,13 @@
 
       const action = (cfg.pricing && cfg.pricing.orderAction) || {};
       const intro = action.emailBodyIntro || "Hi, I would like to order a commission.";
-      const webhookUrl = getDiscordWebhookUrl();
       const submitButton = form.querySelector('button[type="submit"]');
 
-      if (!webhookUrl) {
+      if (!hasDiscordDispatch()) {
         if (status) {
-          status.textContent = action.missingWebhookLabel || "Discord webhook is not configured.";
+          status.textContent =
+            action.missingWebhookLabel ||
+            "Discord delivery is not configured. Add orderAction.discordProxyUrl or discordWebhookUrl.";
         }
         return;
       }
@@ -1276,7 +1277,11 @@
         window.setTimeout(close, 450);
       } catch (error) {
         if (status) {
-          status.textContent = "Failed to send webhook. Check webhook URL and browser network policy.";
+          status.textContent =
+            "Failed to send webhook: " +
+            (error && error.message
+              ? error.message
+              : "Check webhook delivery setup and browser network policy.");
         }
       } finally {
         if (submitButton) {
@@ -1318,8 +1323,53 @@
     return String(action.discordWebhookUrl || "").trim();
   }
 
+  function getDiscordProxyUrl() {
+    const action = (cfg.pricing && cfg.pricing.orderAction) || {};
+    return String(action.discordProxyUrl || "").trim();
+  }
+
+  function hasDiscordDispatch() {
+    return Boolean(getDiscordProxyUrl() || getDiscordWebhookUrl());
+  }
+
   async function sendDiscordWebhook(payload) {
+    const proxyUrl = getDiscordProxyUrl();
     const webhookUrl = getDiscordWebhookUrl();
+
+    if (proxyUrl) {
+      const response = await fetch(proxyUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload),
+        keepalive: true
+      });
+
+      if (!response.ok) {
+        let detail = "";
+        try {
+          const contentType = response.headers.get("content-type") || "";
+          if (contentType.includes("application/json")) {
+            const data = await response.json();
+            detail = data && (data.error || data.details) ? String(data.error || data.details) : "";
+          } else {
+            detail = await response.text();
+          }
+        } catch (_error) {
+          detail = "";
+        }
+
+        const message =
+          "Proxy request failed with status " +
+          String(response.status) +
+          (detail ? ": " + detail : "");
+        throw new Error(message);
+      }
+
+      return;
+    }
+
     if (!webhookUrl) {
       throw new Error("Webhook URL missing");
     }
