@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Commission terms of service" />
+    <title>TOS</title>
+    <link rel="icon" type="image/png" href="icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="config.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="tos">
+    <div class="bg-noise" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"></span>
+          <span class="brand-text" id="brand-text">Artist</span>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul id="nav-links" class="nav-links"></ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section tos-hero">
+        <div class="container">
+          <div class="section-head reveal" data-reveal="up">
+            <p class="hero-badge">Commission Info</p>
+            <h1>Terms of Service (T.O.S)</h1>
+            <p class="tos-lead">
+              Please read these terms before ordering. Sending payment confirms agreement with the terms below.
+            </p>
+          </div>
+
+          <div class="tos-pricing-grid reveal" data-reveal="up">
+            <article class="tos-price-card">
+              <h3>Headshot</h3>
+              <ul>
+                <li>Sketch: $5</li>
+                <li>Lineart + Flat color: $10</li>
+                <li>Rendered: $15</li>
+              </ul>
+            </article>
+            <article class="tos-price-card">
+              <h3>Half-Body</h3>
+              <ul>
+                <li>Sketch: $15</li>
+                <li>Lineart + Flat color: $20</li>
+                <li>Rendered: $25</li>
+              </ul>
+            </article>
+            <article class="tos-price-card">
+              <h3>Full Body</h3>
+              <ul>
+                <li>Sketch: $25</li>
+                <li>Lineart + Flat color: $30</li>
+                <li>Rendered: $35</li>
+              </ul>
+            </article>
+            <article class="tos-price-card">
+              <h3>Chibis + YCH</h3>
+              <ul>
+                <li>Sketch: $5</li>
+                <li>Lineart + Flat color: $10</li>
+                <li>Rendered: $15</li>
+              </ul>
+            </article>
+            <article class="tos-price-card">
+              <h3>Reference Sheets</h3>
+              <ul>
+                <li>Flat fee: $20</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container tos-grid">
+          <article class="tos-card reveal" data-reveal="left">
+            <h2>General Terms</h2>
+            <ul class="tos-policy-list">
+              <li>
+                I reserve the right to decline any commission request that I am uncomfortable with or does not align
+                with my artistic style.
+              </li>
+              <li>
+                All commissioned artwork is for personal use (wallpaper, prints, profile pictures) only unless
+                discussed otherwise.
+              </li>
+              <li>Payment is upfront, or split in half (50% before and the other 50% after completion of artwork).</li>
+              <li>Revisions/edits are only available during the sketching process. Clients are allowed 3 revisions.</li>
+              <li>Commercial commissions come with an additional fee.</li>
+              <li>
+                As the artist, I have full copyright to commissioned artwork with the right to display it on social
+                media, in portfolios, and galleries unless agreed otherwise. Privacy fee (no posting/showcasing): +$10.
+              </li>
+              <li>Complex background fee: +$10.</li>
+              <li>
+                Refunds are only available if a commission is canceled before work starts, or if I cancel before I can
+                begin due to unforeseen circumstances.
+              </li>
+            </ul>
+          </article>
+
+          <div class="tos-do-grid reveal" data-reveal="right">
+            <article class="tos-card">
+              <h2>Will Do</h2>
+              <ul class="tos-list">
+                <li>Furries</li>
+                <li>Humans</li>
+                <li>Humanoids</li>
+                <li>Yumeships</li>
+                <li>Fanart</li>
+                <li>Kemonomimi</li>
+                <li>Nudity</li>
+                <li>Moderate gore</li>
+                <li>Moderate body horror</li>
+                <li>Simple backgrounds</li>
+              </ul>
+            </article>
+
+            <article class="tos-card">
+              <h2>Will NOT Do</h2>
+              <ul class="tos-list">
+                <li>Heavy gore</li>
+                <li>NSFW</li>
+                <li>Complex perspective</li>
+                <li>MECHA (sorry)</li>
+                <li>Proships/Darkships</li>
+                <li>Vehicles</li>
+                <li>Hateful art (racism, ableism, homophobia, etc.)</li>
+                <li>Political art</li>
+                <li>Fetish art</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container pricing-actions reveal" data-reveal="up">
+          <a class="btn btn-primary" href="pricing.html">Go To Pricing</a>
+          <a class="btn btn-secondary" href="index.html#contact">Contact</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p id="footer-copy">Copyright 2026 Artist. All rights reserved.</p>
+        <div class="footer-links" id="footer-links"></div>
+        <div class="social-row" id="footer-socials"></div>
+      </div>
+    </footer>
+  </body>
+</html>
