@@ -150,7 +150,7 @@ window.ARTIST_CONFIG = {
   },
 
   portfolio: {
-    heading: "Selected Pieces",
+    heading: "Favorite Pieces",
     description:
       "Take a look at my most recent art pieces!",
     hoverLabel: "Open Piece"
@@ -268,7 +268,7 @@ window.ARTIST_CONFIG = {
   },
 
   footer: {
-    copyright: "Copyright 2026 ItzKuroYT. All rights reserved.",
+    copyright: "Copyright 2026 Kioume. All rights reserved.",
     quickLinks: [
       { label: "Home", href: "index.html#home" },
       { label: "Portfolio", href: "index.html#portfolio" },
