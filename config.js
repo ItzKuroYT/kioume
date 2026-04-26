@@ -84,8 +84,8 @@ window.ARTIST_CONFIG = {
       "Whether you're looking for a simple headshot or a fully rendered character piece, I bring dedication and creativity to every commission. I love collaborating with clients to understand their vision and deliver artwork that exceeds expectations. Let's create something amazing together!",
     avatarPath: "logo.png",
     stats: [
-      { label: "Years Creating", value: "8+" },
-      { label: "Commissioned Pieces", value: "250+" },
+      { label: "Years Creating", value: "9+" },
+      { label: "Commissioned Pieces", value: "27+" },
       { label: "Global Clients", value: "30+" }
     ]
   },
@@ -152,17 +152,17 @@ window.ARTIST_CONFIG = {
   portfolio: {
     heading: "Selected Pieces",
     description:
-      "A curated look at recent work. Replace placeholder images with your own final artwork anytime.",
+      "Take a look at my most recent art pieces!",
     hoverLabel: "Open Piece"
   },
 
   pricing: {
     heading: "Commission Pricing",
     subheading:
-      "Choose a commission type and finish level. Final quotes may vary with complexity.",
+      "Choose a commission type and finish level.",
     carousel: {
       autoPlay: true,
-      intervalMs: 3200,
+      intervalMs: 5200,
       pauseOnHover: true,
       imageFit: "contain"
     },
@@ -172,7 +172,7 @@ window.ARTIST_CONFIG = {
       discordWebhookUrl: "https://discord.com/api/webhooks/1497778992592326847/AL6q5g-wszX1rPpEAxV-rjktqQZ2hdb0mZ_x9d7pfNr1PGHUAgSLh5F7rj50QyIoqeqh",
       missingWebhookLabel: "Set Discord webhook in config",
       discordUrl: "https://discord.gg/example",
-      emailTo: "Example@gmail.com",
+      emailTo: "isaaccooper926@gmail.com",
       emailSubject: "New Commission Request",
       emailBodyIntro: "Hi, I would like to order a commission."
     },
