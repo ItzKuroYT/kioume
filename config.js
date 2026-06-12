@@ -93,9 +93,14 @@ window.ARTIST_CONFIG = {
   assets: {
     piecePrefix: "placeholder",
     pieceStartIndex: 1,
-    pieceEndIndex: 10,
+    pieceEndIndex: 11,
     pieceExtension: ".png",
     pieceDetails: [
+      {
+        title: "placeholder",
+        description: "placeholder",
+        tags: ["placeholder"]
+      },
       {
         title: "placeholder",
         description: "placeholder",
